@@ -39,6 +39,7 @@ public class App {
                 continue;
             }
             // Validação de entrada do usuário - Fim
+            valorAtual -= aposta;
 
             System.out.println("\nGirando roleta...");
             roleta = girar();
@@ -53,7 +54,6 @@ public class App {
                 System.out.printf("\nValor na conta após aposta: R$ %.2f\n", valorAtual);
             } else {
                 System.out.println("\nVocê perdeu!\n");
-                valorAtual -= aposta;
                 // Verifica se acabou o dinheiro - Início
                 if (valorAtual == 0) {
                     break;
